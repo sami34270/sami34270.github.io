@@ -1,0 +1,1298 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bourgoin Sami - Portfolio</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Raleway:wght@400;500;600;700;800&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-darker text-light">
+    <!-- Navbar -->
+    <nav id="navbar" class="fixed w-full py-4 px-6 transition-all duration-300 z-50">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="#accueil" class="text-2xl font-bold gradient-text">Bourgoin Sami</a>
+            
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex space-x-8">
+                <a href="#accueil" class="nav-link">Accueil</a>
+                <a href="#a-propos" class="nav-link">À propos</a>
+                <a href="#  " class="nav-link">E5</a>
+                <a href="#competences" class="nav-link">Compétences</a>
+                <a href="#projets" class="nav-link">Projets</a>
+                <a href="#veille" class="nav-link">Veille</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            
+            <!-- Mobile Menu Button -->
+            <div class="md:hidden">
+                <button id="menu-toggle" class="text-light focus:outline-none">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden bg-darker absolute top-16 left-0 w-full py-4 px-6 hidden transition-all duration-300 z-50">
+            <div class="flex flex-col space-y-4">
+                <a href="#accueil" class="nav-link mobile-link">Accueil</a>
+                <a href="#a-propos" class="nav-link mobile-link">À propos</a>
+                <a href="#e4" class="nav-link mobile-link">E5</a>
+                <a href="#competences" class="nav-link mobile-link">Compétences</a>
+                <a href="#projets" class="nav-link mobile-link">Projets</a>
+                <a href="#veille" class="nav-link mobile-link">Veille</a>
+                <a href="#contact" class="nav-link mobile-link">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section - Accueil -->
+    <section id="accueil" class="min-h-screen flex items-center justify-center pt-20">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2" data-aos="fade-right" data-aos-duration="1000">
+                    <h3 class="text-xl md:text-2xl mb-2 code-font text-highlight">
+                        <span class="text-light opacity-70">const</span> étudiant <span class="text-light opacity-70">=</span> {
+                    </h3>
+                    <h1 class="text-4xl md:text-6xl font-bold mb-4">
+                        Je suis <span class="gradient-text">Bourgoin Sami</span>
+                    </h1>
+                    <h2 class="text-xl md:text-3xl mb-6">Étudiant en Informatique</h2>
+                    <p class="text-light opacity-80 mb-8 text-lg">
+                        Actuellement en deuxième année de BTS SIO
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="CV travail.pdf" class="btn-primary">
+                            Voir mon CV <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                        <a href="#contact" class="btn-secondary">
+                            Me contacter
+                        </a>
+                    </div>
+                    <div class="mt-8 flex space-x-6">
+                       
+                    </div>
+                </div>
+                <div class="md:w-1/2 mt-10 md:mt-0" data-aos="fade-left" data-aos-duration="1000">
+                    <div class="relative">
+                        <div class="bg-primary opacity-20 blur-lg absolute -inset-0.5 rounded-lg"></div>
+                        <div class="bg-darker p-6 rounded-lg relative">
+                            <pre class="code-font text-sm md:text-base text-light overflow-auto">
+<span class="text-primary">class</span> <span class="text-highlight">Developer</span> {
+  constructor() {
+    <span class="text-secondary">this</span>.name = <span class="text-green-400">'Bourgoin Sami'</span>;
+    <span class="text-secondary">this</span>.role = <span class="text-green-400">'Etudiant en BTS SIO'</span>;
+    <span class="text-secondary">this</span>.location = <span class="text-green-400">'France'</span>;
+    <span class="text-secondary">this</span>.languages = [<span class="text-green-400">'HTML'</span>, <span class="text-green-400">'CSS'</span>, <span class="text-green-400">'Java'</span>, <span class="text-green-400">'PHP'</span>];
+    <span class="text-secondary">this</span>.frameworks = [<span class="text-green-400">'Laravel'</span>];
+  }
+
+  <span class="text-primary">sayHello</span>() {
+    console.log(<span class="text-green-400">'Bienvenue sur mon portfolio!'</span>);
+  }
+}
+
+<span class="text-secondary">const</span> me = <span class="text-primary">new</span> <span class="text-highlight">Developer</span>();
+me.sayHello();
+                            </pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- À propos Section -->
+    <section id="a-propos" class="py-20 bg-dark">
+        <div class="container mx-auto px-6">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">À propos de moi</h2>
+            </div>
+
+            <div class="flex flex-col md:flex-row gap-10 mt-12">
+                <div class="md:w-1/3" data-aos="fade-right" data-aos-delay="200">
+                    <div class="relative">
+                        <div class="bg-primary opacity-20 blur-lg absolute -inset-1 rounded-lg"></div>
+                        <div class="bg-dark relative">
+                            <img src="avatar.png" alt="Bakht Mohamed" class="rounded-lg w-full h-auto">
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-2/3" data-aos="fade-left" data-aos-delay="200">
+                    <h3 class="text-2xl font-bold mb-4">Étudiant en Informatique</h3>
+                    <p class="mb-6 text-light opacity-80">
+                        Je suis <strong>Bourgoin Sami </strong>, et je suis actuellement étudiant 🎓 <strong> en deuxième année de BTS SIO</strong> (Services Informatiques aux Organisations) en option SISR (Solution d'Infrastructure Système et Réseau). Je vous propose sur ce portfolio de retrouver ci-dessous les différentes études et projets professionnels que j'ai pu entreprendre au cours de mon parcours académique.
+                    </p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+                        <div class="about-card">
+                            <i class="fas fa-code card-icon"></i>
+                            <h4 class="font-bold text-lg mb-2">Gestion de parc informatique</h4>
+                            <p class="text-light opacity-70">Administration et maintenance du parc informatique.</p>
+                        </div>
+                        <div class="about-card">
+                            <i class="fas fa-palette card-icon"></i>
+                            <h4 class="font-bold text-lg mb-2">Cybersécurité</h4>
+                            <p class="text-light opacity-70">Sécurité réseau et maintenance des serveurs.</p>
+                        </div>
+                        <div class="about-card">
+                            <i class="fas fa-database card-icon"></i>
+                            <h4 class="font-bold text-lg mb-2">Gestion de Base de Données</h4>
+                            <p class="text-light opacity-70">Conception et optimisation de bases de données relationnelles.</p>
+                        </div>
+                        <div class="about-card">
+                            <i class="fas fa-server card-icon"></i>
+                            <h4 class="font-bold text-lg mb-2">Administration Système</h4>
+                            <p class="text-light opacity-70">Configuration et gestion de serveurs web et d'hébergement.</p>
+                        </div>
+                    </div>
+                    <a href="#contact" class="btn-primary">
+                        Me contacter <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- E4 Section -->
+    <section id="e4" class="py-20">
+        <div class="container mx-auto px-6">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">E5</h2>
+                <p class="section-subtitle">Mon épreuve E5 BTS SIO</p>
+            </div>
+
+            <div class="mt-12" data-aos="fade-up" data-aos-delay="200">
+                <div class="bg-dark p-8 rounded-lg">
+                    <h3 class="text-2xl font-bold mb-4">Présentation de l'épreuve E5</h3>
+                    <p class="mb-6 text-light opacity-80">
+                        L'épreuve E5 est une épreuve clé du BTS SIO, elle doit être composée de minimum deux projets ayant un contexte commun en rapport avec l'option choisie (SISR pour mon cas).
+                    </p>
+                    <div class="mb-8">
+                        <h4 class="text-xl font-semibold mb-3">Objectifs de l'épreuve :</h4>
+                        <ul class="list-disc pl-6 space-y-2 text-light opacity-80">
+                            L'objectif de cette épreuve est d'évaluer le candidat sur une des deux situations professionnelles qu'il aura réalisées sur les 2 ans de formation. Cette épreuve est aussi accompagnée d'un tableau des compétences, compétences qui devront être décrites et réalisées au cours des projets présentés.
+                        </ul>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div class="e4-card">
+                            <div class="card-header">
+                                <i class="fas fa-building text-lg mr-2"></i>
+                                <h4 class="font-bold">Stage en entreprise</h4>
+                            </div>
+                            <p class="mt-3 text-light opacity-80">
+                                J'ai effectué mon stage chez Amaris, où j'ai pu participer à plusieurs projets.
+                            </p>
+                        </div>
+                        <div class="e4-card">
+                            <div class="card-header">
+                                <i class="fas fa-tasks text-lg mr-2"></i>
+                                <h4 class="font-bold">Projets réalisés</h4>
+                            </div>
+                            <p class="mt-3 text-light opacity-80">
+                                Durant cette période, j'ai gérer un parc informatiqu et fait du support informatique.
+                            </p>
+                        </div>
+                        <div class="e4-card">
+                            <div class="card-header">
+                                <i class="fas fa-cogs text-lg mr-2"></i>
+                                <h4 class="font-bold">Compétences développées</h4>
+                            </div>
+                            <p class="mt-3 text-light opacity-80">
+                                Cette expérience m'a permis d'acquérir de nouvelles compétences techniques. 0365, Azure, Odoo...
+                            
+                            </p>
+                        </div>
+                        <div class="e4-card">
+                            <div class="card-header">
+                                <i class="fas fa-file-alt text-lg mr-2"></i>
+                                <h4 class="font-bold">Documentation</h4>
+                            </div>
+                            <p class="mt-3 text-light opacity-80">
+                                Vous pouvez consulter mon rapport d'alternance et les documents relatifs à 
+                                mon épreuve E5 en utilisant le lien ci-dessous.
+                            </p>
+                            <a href="tableau de synthèse BTS SIO SISR.pdf" class="inline-block mt-4 text-primary hover:text-highlight transition-colors">
+                                <i class="fas fa-download mr-2"></i> Télécharger le dossier E5
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="competences" class="py-20 bg-dark">
+        <div class="container mx-auto px-6">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Compétences</h2>
+            </div>
+
+            <div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-10">
+                <!-- Technical Skills -->
+                <div data-aos="fade-right" data-aos-delay="200">
+                    <h3 class="text-2xl font-bold mb-6">Compétences Techniques</h3>
+                    
+                    <!-- Compétences techniques -->
+                    <div class="mb-8">
+                        <div class="grid grid-cols-3 gap-4">
+                            <div class="skill-item">
+                                <i class="fas fa-file-word text-4xl text-blue-500 mb-2"></i>
+                                <span class="font-medium">Word/Excel</span>
+                                <div class="skill-tooltip">
+                                    <p>Maîtrise des outils bureautiques Microsoft Office pour la création de documents professionnels, l'analyse de données et la réalisation de présentations.</p>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fab fa-microsoft text-4xl text-blue-400 mb-2"></i>
+                                <span class="font-medium">Azure/O365</span>
+                                <div class="skill-tooltip">
+                                    <p>Utilisation des services cloud Microsoft Azure et Office 365 pour la gestion des ressources informatiques, le stockage et la collaboration en ligne.</p>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fas fa-cogs text-4xl text-purple-500 mb-2"></i>
+                                <span class="font-medium">Odoo CRM</span>
+                                <div class="skill-tooltip">
+                                    <p>Administration et développement sur la plateforme Odoo CRM pour la gestion de la relation client, les ventes et la gestion d'entreprise.</p>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fas fa-network-wired text-4xl text-yellow-500 mb-2"></i>
+                                <span class="font-medium">Gestion DNS</span>
+                                <div class="skill-tooltip">
+                                    <p>Configuration et gestion des serveurs DNS (Domain Name System) pour assurer la résolution de noms de domaine et la connectivité réseau.</p>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fas fa-desktop text-4xl text-green-500 mb-2"></i>
+                                <span class="font-medium">Remote Desktop</span>
+                                <div class="skill-tooltip">
+                                    <p>Installation et configuration d'environnements bureaux virtuels et de services d'accès à distance pour permettre le travail à distance sécurisé.</p>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fas fa-project-diagram text-4xl text-blue-300 mb-2"></i>
+                                <span class="font-medium">Packet Tracer</span>
+                                <div class="skill-tooltip">
+                                    <p>Utilisation de Packet Tracer pour la simulation et la conception de réseaux informatiques, permettant de tester différentes configurations avant déploiement en production.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Outils supplémentaires -->
+                    <div>
+                        <h4 class="text-xl font-semibold mb-4">Outils & Systèmes</h4>
+                        <div class="grid grid-cols-3 gap-4">
+                            <div class="skill-item">
+                                <i class="fab fa-windows text-4xl text-blue-400 mb-2"></i>
+                                <span class="font-medium">Windows</span>
+                                <div class="skill-tooltip">
+                                    <p>Administration et maintenance de systèmes Windows Server et postes clients, incluant la gestion des utilisateurs, des politiques de sécurité et des mises à jour.</p>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fab fa-linux text-4xl text-orange-400 mb-2"></i>
+                                <span class="font-medium">Linux</span>
+                                <div class="skill-tooltip">
+                                    <p>Configuration et gestion de systèmes Linux, administration de serveurs et utilisation de la ligne de commande pour diverses tâches d'administration système.</p>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fas fa-server text-4xl text-green-400 mb-2"></i>
+                                <span class="font-medium">Virtualisation</span>
+                                <div class="skill-tooltip">
+                                    <p>Création et gestion de machines virtuelles et conteneurs avec VMware et autres technologies de virtualisation pour optimiser l'utilisation des ressources informatiques.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Other Skills & Tools -->
+                <div data-aos="fade-left" data-aos-delay="200">
+                    <h3 class="text-2xl font-bold mb-6">Outils de développement</h3>
+                    
+                    <!-- Tools -->
+                    <div class="mb-8">
+                        <div class="grid grid-cols-2 gap-6">
+                            <div class="tool-card">
+                                <i class="fab fa-git-alt text-3xl mb-3 text-orange-500"></i>
+                                <span>Git</span>
+                                <div class="skill-tooltip">
+                                    <p>Git est un système de contrôle de version distribué qui permet aux développeurs de suivre les modifications du code source, de collaborer efficacement et de gérer différentes versions d'un projet.</p>
+                                </div>
+                            </div>
+                            <div class="tool-card">
+                                <i class="fab fa-github text-3xl mb-3 text-gray-200"></i>
+                                <span>GitHub</span>
+                                <div class="skill-tooltip">
+                                    <p>GitHub est une plateforme d'hébergement de code basée sur Git qui facilite la collaboration, le partage de code et la gestion de projets. Elle offre des fonctionnalités comme les pull requests, les issues et les actions.</p>
+                                </div>
+                            </div>
+                            <div class="tool-card">
+                                <img src="https://cdn.worldvectorlogo.com/logos/visual-studio-code-1.svg" class="w-12 h-12 mb-3 mx-auto" alt="VS Code Logo">
+                                <span>VS Code</span>
+                                <div class="skill-tooltip">
+                                    <p>Visual Studio Code est un éditeur de code source léger mais puissant. Il offre une complétion de code intelligente, une intégration Git native, le débogage et une extensibilité par de nombreuses extensions.</p>
+                                </div>
+                            </div>
+                            <div class="tool-card">
+                                <i class="fas fa-shield-alt text-3xl mb-3 text-blue-500"></i>
+                                <span>Cybersécurité</span>
+                                <div class="skill-tooltip">
+                                    <p>Mise en place de solutions de sécurité réseau, analyse des vulnérabilités et protection des infrastructures informatiques contre les menaces potentielles.</p>
+                                </div>
+                            </div>
+                            <div class="tool-card">
+                                <i class="fas fa-network-wired text-3xl mb-3 text-green-500"></i>
+                                <span>Administration Réseau</span>
+                                <div class="skill-tooltip">
+                                    <p>Configuration et maintenance des équipements réseau, mise en place de VLANs, routage, et gestion des politiques de sécurité réseau.</p>
+                                </div>
+                            </div>
+                            <div class="tool-card">
+                                <i class="fas fa-database text-3xl mb-3 text-purple-500"></i>
+                                <span>Administration BDD</span>
+                                <div class="skill-tooltip">
+                                    <p>Gestion et optimisation de bases de données, création de requêtes SQL et maintenance des systèmes de gestion de bases de données relationnelles.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Soft Skills Section -->
+                    <div>
+                        <h3 class="text-2xl font-bold mb-6">Soft Skills</h3>
+                        <div class="space-y-4">
+                            <div class="soft-skill flex items-center">
+                                <div class="soft-skill-icon">
+                                    <i class="fas fa-users"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold">Travail d'équipe</h4>
+                                    <p class="text-light opacity-70 text-sm">Collaboration efficace et communication avec les membres de l'équipe</p>
+                                </div>
+                            </div>
+                            <div class="soft-skill flex items-center">
+                                <div class="soft-skill-icon">
+                                    <i class="fas fa-lightbulb"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold">Résolution de problèmes</h4>
+                                    <p class="text-light opacity-70 text-sm">Approche analytique pour identifier et résoudre les problèmes techniques</p>
+                                </div>
+                            </div>
+                            <div class="soft-skill flex items-center">
+                                <div class="soft-skill-icon">
+                                    <i class="fas fa-tasks"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold">Gestion de projet</h4>
+                                    <p class="text-light opacity-70 text-sm">Planification, organisation et suivi des tâches pour atteindre les objectifs</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projets Section -->
+    <section id="projets" class="py-20">
+        <div class="container mx-auto px-6">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Projets</h2>
+            </div>
+
+            <div class="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Projet 1 -->
+                <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="project-image">
+                        <img src="gantt.png" alt="TP Seven" class="w-full h-full object-cover">
+                        <div class="project-overlay">
+                            <button class="view-project-btn" data-modal="project1">
+                                <i class="fas fa-eye mr-2"></i> Voir le projet
+                            </button>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">Gestion de projet Gantt</h3>
+                    </div>
+                </div>
+
+                <!-- Projet 2 -->
+                <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="project-image">
+                        <img src="zabbix.png" alt="Calculatrice Laravel" class="w-full h-full object-cover">
+                        <div class="project-overlay">
+                            <button class="view-project-btn" data-modal="project2">
+                                <i class="fas fa-eye mr-2"></i> Voir le projet
+                            </button>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">Zabbix</h3>
+                    </div>
+                </div>
+
+                <!-- Projet 3 -->
+                <div class="project-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="project-image">
+                        <img src="snort.png" alt="PPE Parking" class="w-full h-full object-cover">
+                        <div class="project-overlay">
+                            <button class="view-project-btn" data-modal="project3">
+                                <i class="fas fa-eye mr-2"></i> Voir le projet
+                            </button>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">Snort</h3>
+                    </div>
+                </div>
+
+                <!-- Projet 4 -->
+                <div class="project-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="project-image">
+                        <img src="ad dns dhcp.png" alt="PPE Personnel" class="w-full h-full object-cover">
+                        <div class="project-overlay">
+                            <button class="view-project-btn" data-modal="project4">
+                                <i class="fas fa-eye mr-2"></i> Voir le projet
+                            </button>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">Redondance AD DNS DHCP</h3>
+                    </div>
+                </div>
+
+                <!-- Projet 5 -->
+                <div class="project-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="project-image">
+                        <img src="owncloud.png" alt="TP Devis" class="w-15 h-auto rounded-lg mb-6">
+                        <div class="project-overlay">
+                            <button class="view-project-btn" data-modal="project5">
+                                <i class="fas fa-eye mr-2"></i> Voir le projet
+                            </button>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">Owncloud</h3>
+                    </div>
+                </div>
+
+                <!-- Projet 6 -->
+                <div class="project-card" data-aos="fade-up" data-aos-delay="600">
+                    <div class="project-image">
+                        <img src="hsrp lacp.png" alt="API REST" class="w-full h-full object-cover">
+                        <div class="project-overlay">
+                            <button class="view-project-btn" data-modal="project6">
+                                <i class="fas fa-eye mr-2"></i> Voir le projet
+                            </button>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">HSRP LACP</h3>
+                    </div>
+                </div>
+
+                <!-- Projet 7 (Nouveau) -->
+                <div class="project-card" data-aos="fade-up" data-aos-delay="700">
+                    <div class="project-image">
+                        <img src="cgaming2.jpg" alt="Veille Cloud Gaming" class="w-full h-full object-cover">
+                        <div class="project-overlay">
+                            <button class="view-project-btn" data-modal="project7">
+                                <i class="fas fa-eye mr-2"></i> Voir le projet
+                            </button>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">Veille Technologique : Cloud Gaming</h3>
+                    </div>
+                </div>
+
+                <!-- Projet 8 (Nouveau) -->
+                <div class="project-card" data-aos="fade-up" data-aos-delay="800">
+                    <div class="project-image">
+                        <img src="glpi.png" alt="Portfolio" class="w-full h-full object-cover">
+                        <div class="project-overlay">
+                            <button class="view-project-btn" data-modal="project8">
+                                <i class="fas fa-eye mr-2"></i> Voir le projet
+                            </button>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">GLPI</h3>
+                    </div>
+                </div>
+
+               
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Veille Section -->
+    <section id="veille" class="py-20 bg-dark">
+        <div class="container mx-auto px-6">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Veille Technologique</h2>
+            </div>
+
+            <div class="mt-12">
+                <div class="bg-darker p-8 rounded-lg" data-aos="fade-up" data-aos-delay="200">
+                    <div class="flex flex-col lg:flex-row gap-8">
+                        <!-- Partie Gauche - Sujet de veille -->
+                        <div class="lg:w-1/2">
+                            <h3 class="text-2xl font-bold mb-4">🎮 Le Cloud Gaming</h3>
+                            <p class="mb-4 text-light opacity-80">
+                                Le <strong>Cloud Gaming</strong>, ou jeu en streaming, permet aux utilisateurs de jouer à des jeux vidéo sans 
+                                avoir besoin d'une console ou d'un ordinateur puissant. Les jeux sont exécutés sur des 
+                                serveurs distants et les images sont transmises en temps réel sur l'écran de l'utilisateur via 
+                                une connexion internet. Cela élimine le besoin d'acheter du matériel coûteux, puisque le 
+                                traitement graphique et les calculs lourds sont déportés sur des serveurs dans le cloud.
+                            </p>
+                            
+                            <h4 class="text-lg font-semibold mb-3 text-blue-400">🔧 Technologies utilisées :</h4>
+                            <ul class="list-disc pl-6 space-y-2 text-light opacity-80 mb-4">
+                                <li><strong>Infrastructure Cloud :</strong> Des plateformes comme 
+                                    <a href="https://cloud.google.com/" target="_blank" class="text-blue-400 hover:text-blue-300">Google Cloud</a>, 
+                                    <a href="https://azure.microsoft.com/" target="_blank" class="text-blue-400 hover:text-blue-300">Microsoft Azure</a>, ou 
+                                    <a href="https://aws.amazon.com/" target="_blank" class="text-blue-400 hover:text-blue-300">Amazon Web Services (AWS)</a> 
+                                    hébergent les serveurs nécessaires au fonctionnement des services de Cloud Gaming.
+                                </li>
+                                <li><strong>Streaming vidéo :</strong> Les jeux sont rendus sur un serveur distant et transmis sous forme de 
+                                    flux vidéo en temps réel à l'utilisateur via des protocoles comme WebRTC.
+                                </li>
+                                <li><strong>Réseau et latence :</strong> Une connexion internet rapide et stable est cruciale pour une 
+                                    expérience fluide. Les réseaux 5G et la fibre optique jouent un rôle essentiel dans le 
+                                    développement du Cloud Gaming.
+                                </li>
+                            </ul>
+                            
+                            <h4 class="text-lg font-semibold mb-3 text-blue-400">⚙️ Comment ça fonctionne ?</h4>
+                            <ul class="list-disc pl-5 mb-4 text-light opacity-80">
+                                <li>Lorsqu'un joueur lance un jeu en Cloud Gaming, son appareil se connecte à un ordinateur performant distant hébergeant le jeu.</li>
+                                <li>L'ordinateur distant exécute le jeu et génère les images en fonction des actions du joueur. Ces images sont ensuite compressées et envoyées sous forme de flux vidéo via internet.</li>
+                                <li>Les commandes du joueur (via manette, clavier ou écran tactile) sont transmises à l'ordinateur distant presque instantanément, ce qui permet une interaction en temps réel.</li>
+                            </ul>
+                            <p class="mb-4 text-light opacity-80">
+                                La qualité de l'expérience dépend principalement de la vitesse et de la stabilité de la connexion internet. Une connexion 
+                                à faible latence et un débit suffisant permettent de minimiser les délais entre l'action du joueur et la réponse du jeu, 
+                                garantissant ainsi une expérience fluide et immersive.
+                            </p>    
+            
+                            <div class="bg-dark p-4 rounded-lg mb-4">
+                                <h4 class="text-lg font-semibold mb-2 text-blue-300">📺 Vidéo sur le Cloud Gaming :</h4>
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/WB4TBw_KI6E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                <div class="aspect-w-16 aspect-h-9 relative">
+                                    <div class="absolute inset-0 flex items-center justify-center">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        
+                        
+                        <!-- Partie Droite - Outils et ressources -->
+<div class="lg:w-1/2">
+    <div class="bg-dark p-6 rounded-lg mb-6">
+        <div class="flex items-center mb-4">
+            <a href="https://www.google.com/alerts" target="_blank">
+                <img src="googlealert.png" alt="Google Alert Icon" class="w-100 h-12 mr-4 rounded">
+            </a>
+            <h4 class="text-xl font-bold">Google Alert</h4>
+        </div>
+
+                                <p class="text-light opacity-80 mb-4">
+                                    Mon outil principal pour organiser et suivre mes sources d'information techniques. <a href="cloud.png" target="_blank"><strong>Google Alert</strong></a> est un service de veille qui permet de recevoir des notifications par e-mail sur les sujets qui m'intéressent. Il est accessible via navigateur et me permet de surveiller les nouvelles publications en ligne.
+                                </p>
+                            </div>
+                            
+                            <div class="bg-dark p-6 rounded-lg mb-6">
+                                <h4 class="text-xl font-bold mb-4">Services de Cloud Gaming</h4>
+                                <div class="grid grid-cols-2 gap-4 mb-4">
+                                    <img src="Cgaming1.jpg" alt="Cloud Gaming Services" class="rounded-lg w-full">
+                                    <img src="cgaming2.jpg" alt="Cloud Gaming Services" class="rounded-lg w-full">
+                                    <img src="cgaming3.webp" alt="Cloud Gaming Services" class="rounded-lg w-full">
+                                </div>
+                            </div>
+                            
+                            <div class="bg-dark p-6 rounded-lg">
+                                <h4 class="text-xl font-bold mb-4">Articles utiles :</h4>
+                                <ul class="space-y-3">
+                                    <li>
+                                        <a href="https://shadow.tech/fr/shadowpc/offers/" class="text-blue-400 hover:text-blue-300 flex items-center" target="_blank">
+                                            <i class="fas fa-external-link-alt mr-2"></i>
+                                            Shadow - Service de PC dans le Cloud
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.nvidia.com/en-us/geforce-now/" class="text-blue-400 hover:text-blue-300 flex items-center" target="_blank">
+                                            <i class="fas fa-external-link-alt mr-2"></i>
+                                            GeForce NOW - NVIDIA Cloud Gaming
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.xbox.com/en-US/xbox-game-pass/cloud-gaming" class="text-blue-400 hover:text-blue-300 flex items-center" target="_blank">
+                                            <i class="fas fa-external-link-alt mr-2"></i>
+                                            Xbox Cloud Gaming
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.amazon.com/luna" class="text-blue-400 hover:text-blue-300 flex items-center" target="_blank">
+                                            <i class="fas fa-external-link-alt mr-2"></i>
+                                            Amazon Luna - Cloud Gaming
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Articles récents -->
+                    <div class="mt-10">
+                        <h4 class="text-xl font-semibold mb-4">Articles récents</h4>
+                        <div class="space-y-6">
+                            <div class="article-card">
+                                <div class="article-date">
+                                    <span class="day">22</span>
+                                    <span class="month">Mars</span>
+                                </div>
+                                <div class="article-content">
+                                    <h5 class="font-semibold text-lg">Cloud gaming : la fin des machines locales ?</h5>
+                                    <p class="text-light opacity-70 mt-2">
+                                        Le cloud gaming est en plein essor et transforme profondément les habitudes des joueurs. Il permet de jouer en streaming sans posséder une machine puissante.
+                                    </p>
+                                    <a href="https://www.journaldufreenaute.fr/cloud-gaming-fin-machines-locales/" class="inline-block mt-3 text-primary hover:text-highlight transition-colors">
+                                        Lire plus <i class="fas fa-arrow-right ml-1"></i>
+                                    </a>
+                                    
+                                </div>
+                            </div>
+                            <div class="article-card">
+                                <div class="article-date">
+                                    <span class="day">18</span>
+                                    <span class="month">Mars</span>
+                                </div>
+                                <div class="article-content">
+                                    <h5 class="font-semibold text-lg">L'avenir du jeu vidéo : comment le cloud gaming transforme l'industrie</h5>
+                                    <p class="text-light opacity-70 mt-2">
+                                        L'industrie du jeu vidéo a évolué, du multijoueur en ligne à la réalité virtuelle. 
+                                    </p>
+                                    <a href="https://www.realite-virtuelle.com/lavenir-jeu-video-cloud-gaming-transforme-lindustrie/" class="inline-block mt-3 text-primary hover:text-highlight transition-colors">
+                                        Lire plus <i class="fas fa-arrow-right ml-1"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            <div class="article-card">
+                                <div class="article-date">
+                                    <span class="day">03</span>
+                                    <span class="month">Mars</span>
+                                </div>
+                                <div class="article-content">
+                                    <h5 class="font-semibold text-lg">Influence du cloud gaming : vers la fin du hardware traditionnel ?</h5>
+                                    <p class="text-light opacity-70 mt-2">
+                                        Et si en 2025, le cloud gaming était en train de s'imposer comme une alternative aux consoles traditionnelles ?
+                                    </p>
+                                    <a href="https://jesuisungameur.com/2025/03/03/cloud-gaming-vers-la-fin-du-hardware/" class="inline-block mt-3 text-primary hover:text-highlight transition-colors">
+                                        Lire plus <i class="fas fa-arrow-right ml-1"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            <div class="article-card">
+                                <div class="article-date">
+                                    <span class="day">24</span>
+                                    <span class="month">Déc</span>
+                                </div>
+                                <div class="article-content">
+                                    <h5 class="font-semibold text-lg">Xbox Cloud Gaming : Jouez sans téléchargement et libérez de l'espace sur votre console !</h5>
+                                    <p class="text-light opacity-70 mt-2">
+                                        Une avancée majeure pour le cloud gaming
+                                    </p>
+                                    <a href="https://jeux.ca/xbox-cloud-gaming-stream-your-own-game/" class="inline-block mt-3 text-primary hover:text-highlight transition-colors">
+                                        Lire plus <i class="fas fa-arrow-right ml-1"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20">
+        <div class="container mx-auto px-6">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Contact</h2>
+            </div>
+
+            <div class="mt-12 grid grid-cols-1 lg:grid-cols-2 gap-10">
+                <div data-aos="fade-right" data-aos-delay="200">      
+                    <div class="space-y-6">
+                        <div class="contact-info">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4 class="font-semibold">Email</h4>
+                                <p>sami74330@gmail.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-info">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4 class="font-semibold">Téléphone</h4>
+                                <p>+33 7 83 60 41 12</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-info">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4 class="font-semibold">Localisation</h4>
+                                <p>Montpellier, France</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8">
+                        <h4 class="font-semibold mb-4">Retrouvez-moi sur</h4>
+                        <div class="flex space-x-4">
+                            <a href="" class="social-icon"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div data-aos="fade-left" data-aos-delay="200">
+                    <form id="contact-form" class="bg-dark p-8 rounded-lg">
+                        <div class="mb-6">
+                            <label for="name" class="block mb-2 font-medium">Nom</label>
+                            <input type="text" id="name" class="form-input" placeholder="Votre nom" required>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label for="email" class="block mb-2 font-medium">Email</label>
+                            <input type="email" id="email" class="form-input" placeholder="Votre email" required>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label for="subject" class="block mb-2 font-medium">Sujet</label>
+                            <input type="text" id="subject" class="form-input" placeholder="Sujet de votre message" required>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label for="message" class="block mb-2 font-medium">Message</label>
+                            <textarea id="message" rows="5" class="form-input" placeholder="Votre message" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn-primary w-full">
+                            Envoyer le message <i class="fas fa-paper-plane ml-2"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-10 bg-darker">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <a href="#accueil" class="text-2xl font-bold gradient-text">BOURGOIN Sami</a>
+                    <p class="mt-2 text-light opacity-70">Etudiant en BTS SIO</p>
+                </div>
+                
+                <div class="mb-6 md:mb-0">
+                    <h4 class="font-semibold mb-4">Navigation</h4>
+                    <div class="grid grid-cols-2 gap-x-10 gap-y-2">
+                        <a href="#accueil" class="text-light opacity-70 hover:text-primary transition-colors">Accueil</a>
+                        <a href="#a-propos" class="text-light opacity-70 hover:text-primary transition-colors">À propos</a>
+                        <a href="#e4" class="text-light opacity-70 hover:text-primary transition-colors">E5</a>
+                        <a href="#competences" class="text-light opacity-70 hover:text-primary transition-colors">Compétences</a>
+                        <a href="#projets" class="text-light opacity-70 hover:text-primary transition-colors">Projets</a>
+                        <a href="#veille" class="text-light opacity-70 hover:text-primary transition-colors">Veille</a>
+                        <a href="#contact" class="text-light opacity-70 hover:text-primary transition-colors">Contact</a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4">Suivez-moi</h4>
+                    <div class="flex space-x-4">
+                        <a href="" class="social-icon"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-10 pt-6 border-t border-gray-800 text-center">
+                <p class="text-light opacity-70">
+                    © 2025 Bourgoin. Tous droits réservés.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modals for Projects -->
+    <!-- Project 1 Modal -->
+    <div id="project1" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="text-2xl font-bold">Gantt</h3>
+                <button class="close-modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <img src="gantt.png" alt="Seven" class="w-20 h-auto rounded-lg mb-6">
+                <div class="space-y-4">
+                    <div>
+                        <h4 class="text-lg font-semibold mb-2">Description</h4>
+                        <p class="text-light opacity-80">
+                            Le diagramme de Gantt est un outil utilisé en ordonnancement et en gestion deprojet et permettant
+                            de visualiser dans le temps les diverses tâches composant unprojet. 
+                            Il s'agit d'une représentation d'un graphe connexe, valué et orienté,
+                            quipermet de représenter graphiquement l'avancement du projet.
+                        </p>
+                    </div>
+                    
+                    <div>
+                        <h4 class="text-lg font-semibold mb-2">Technologies utilisées</h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="tech-tag">Gantt</span>
+                            <span class="tech-tag">Cisco</span>
+                        </div>
+                    </div>
+                
+                    
+                    <div>
+                        <h4 class="text-lg font-semibold mb-2">Documentation</h4>
+                        <a href="GANTT.pdf" target="_blank" 
+                           class="inline-block bg-green-600 text-white py-2 px-6 rounded-lg shadow-lg hover:bg-green-700 transition duration-300">
+                           Télécharger la documentation
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Project 3 Modal -->
+    <div id="project3" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="text-2xl font-bold">Snort</h3>
+                <button class="close-modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <img src="snort.png" alt="Application de Réservation" class="w-25 h-auto rounded-lg mb-6">
+                <div class="space-y-4">
+                    <div>
+                        <h4 class="text-lg font-semibold mb-2">Description</h4>
+                        <p class="text-light opacity-80">
+                            SNORT est un puissant système de détection des intrusions (IDS) et un système de prévention 
+                            des intrusions (IPS) open source qui fournit une analyse du trafic réseau 
+                            et un journalisation des paquet de données en temps réel.
+                        </p>
+                    </div>
+                    
+                    <div>
+                        <h4 class="text-lg font-semibold mb-2">Technologies utilisées</h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="tech-tag">Cisco</span>
+                            <span class="tech-tag">Pfsense</span>
+                          
+                        </div>
+                    </div>
+                    
+                    <div>
+                        
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        
+                        </a>
+                        
+                        <h4 class="text-lg font-semibold mb-2">Documentation</h4>
+                        <a href="Snort.pdf" target="_blank" 
+                           class="inline-block bg-green-600 text-white py-2 px-6 rounded-lg shadow-lg hover:bg-green-700 transition duration-300">
+                           Télécharger la documentation
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Project 2 Modal -->
+    <div id="project2" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="text-2xl font-bold">Zabbix</h3>
+                <button class="close-modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <img src="zabbix.png" alt="Calculatrice" class="w-20 h-auto rounded-lg mb-6">
+                <div class="space-y-4">
+                    <div>
+                        <h4 class="text-lg font-semibold mb-2">Description</h4>
+                        <p class="text-light opacity-80">
+                            ZABBIX est un logiciel libre permettant de surveiller l'état de divers
+                            services réseau, serveurs et autres matériels réseau et produisant des
+                            graphiques dynamiques de consommation des ressources
+                        </p>
+                    </div>
+                    
+                    <div>
+                        <h4 class="text-lg font-semibold mb-2">Technologies utilisées</h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="tech-tag">Ubuntu</span>
+                            <span class="tech-tag">Cisco</span>
+                            <span class="tech-tag">Zabbix</span>
+                            
+                        </div>
+                    </div>
+                    
+                    <div>
+                        
+                    </div>
+                    
+                    <div>
+                       
+                        </a>
+                        
+                        <h4 class="text-lg font-semibold mb-2">Documentation</h4>
+                        <a href="Zabbix.pdf" target="_blank" 
+                           class="inline-block bg-green-600 text-white py-2 px-6 rounded-lg shadow-lg hover:bg-green-700 transition duration-300">
+                           Télécharger la documentation
+                        </a>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Project 4 Modal -->
+    <div id="project4" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="text-2xl font-bold">Redondance AD DNS DHCP</h3>
+                <button class="close-modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <img src="ad dns dhcp.png" alt="Application de Personnel" class="w-full h-auto rounded-lg mb-6">
+                <div class="space-y-4">
+                    <div>
+                        <h4 class="text-lg font-semibold mb-2">Description</h4>
+                        <p class="text-light opacity-80">
+                            Active Directory (AD) est la mise en œuvre par Microsoft des services d'annuaire LDAP pour
+                            les systèmes d'exploitation Windows.
+                            L'objectif principal d'Active Directory est de fournir des services centralisés d'identification et
+                            d'authentification à un réseau d'ordinateurs utilisant le système Windows, macOS ou encore
+                            Linux.
+                        </p>
+                    </div>
+                    
+                    <div>
+                        <h4 class="text-lg font-semibold mb-2">Technologies utilisées</h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="tech-tag">Cisco</span>
+                            <span class="tech-tag">Gestionnaire AD</span>
+                            
+                        </div>
+                    </div>
+                    
+                    <div>
+                       
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        
+                        </a>
+                        
+                        <h4 class="text-lg font-semibold mb-2">Documentation</h4>
+                        <a href="Redondance_AD_DNS_DHCP.pdf" target="_blank" 
+                           class="inline-block bg-green-600 text-white py-2 px-6 rounded-lg shadow-lg hover:bg-green-700 transition duration-300">
+                           Télécharger la documentation
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Project 5 Modal -->
+    <div id="project5" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="text-2xl font-bold">Owncloud</h3>
+                <button class="close-modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <img src="owncloud.png" alt="Devis" class="w-15 h-auto rounded-lg mb-6">
+                <div class="space-y-4">
+                    <div>
+                        <h4 class="text-lg font-semibold mb-2">Description</h4>
+                        <p class="text-light opacity-80">
+                            OwnCloud est un logiciel libre offrant une plateforme de services de stockage et partage de fichiers et d'applications diverses en ligne                        </p>
+                    </div>
+                    
+                    <div>
+                        <h4 class="text-lg font-semibold mb-2">Documentation</h4>
+                        <a href="Owncloud.pdf" target="_blank" 
+                           class="inline-block bg-green-600 text-white py-2 px-6 rounded-lg shadow-lg hover:bg-green-700 transition duration-300">
+                           Télécharger la documentation
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Project 6 Modal -->
+    <div id="project6" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="text-2xl font-bold">HSRP LACP</h3>
+                <button class="close-modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <img src="hsrp lacp.png" alt="API REST" class="w-full h-auto rounded-lg mb-6">
+                <div class="space-y-4">
+                    <div>
+                        <h4 class="text-lg font-semibold mb-2">Description</h4>
+                        <p class="text-light opacity-80">
+                            Hot Standby Router Protocol (HSRP) est un protocole propriétaire de Cisco implémenté sur
+                            les routeurs et les commutateurs de niveau 3 permettant une continuité de service. HSRP est
+                            principalement utilisé pour assurer la disponibilité de la passerelle par défaut dans un sousréseau en dépit d'une panne d'un routeur.                        </p>
+                    </div>
+                    
+                    <div>
+                        
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <h4 class="text-lg font-semibold mb-2">Documentation</h4>
+                        <a href="HSRP_LACP.pdf" target="_blank" 
+                           class="inline-block bg-green-600 text-white py-2 px-6 rounded-lg shadow-lg hover:bg-green-700 transition duration-300">
+                           Télécharger la documentation
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Project 7 Modal (Veille Technologique : Cloud Gaming) -->
+    <div id="project7" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="text-2xl font-bold">Veille Technologique : Cloud Gaming</h3>
+                <button class="close-modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="grid grid-cols-2 gap-4 mb-6">
+                    <img src="Cgaming1.jpg" alt="Cloud Gaming Services" class="rounded-lg w-full">
+                    <img src="cgaming2.jpg" alt="Cloud Gaming Services" class="rounded-lg w-full">
+                    <img src="cgaming3.webp" alt="Cloud Gaming Services" class="rounded-lg w-full">
+                </div>
+                <div class="space-y-4">
+                    <div>
+                        <h4 class="text-lg font-semibold mb-2">Description</h4>
+                        <p class="text-light opacity-80">
+                            Projet de veille technologique sur le Cloud Gaming, une technologie révolutionnaire qui permet 
+                            de jouer à des jeux vidéo sans avoir besoin d'une console ou d'un ordinateur puissant. Cette veille
+                            s'est concentrée sur l'analyse des leaders du marché, les technologies utilisées et les perspectives
+                            d'évolution de ce secteur en pleine croissance.
+                        </p>
+                    </div>
+                    
+                    <div>
+                        <h4 class="text-lg font-semibold mb-2">Sujets abordés</h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="tech-tag">Infrastructure Cloud</span>
+                            <span class="tech-tag">Streaming vidéo</span>
+                            <span class="tech-tag">Latence réseau</span>
+                            <span class="tech-tag">GeForce NOW</span>
+                            <span class="tech-tag">Xbox Cloud Gaming</span>
+                            <span class="tech-tag">Shadow</span>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <h4 class="text-lg font-semibold mb-2">Contenu de la veille</h4>
+                        <ul class="list-disc pl-6 text-light opacity-80 space-y-1">
+                            <li>Analyse comparative des principaux acteurs du marché</li>
+                            <li>Étude des technologies de streaming et de compression utilisées</li>
+                            <li>Exploration des défis techniques (latence, bande passante)</li>
+                            <li>Impact de la 5G sur le développement du Cloud Gaming</li>
+                            <li>Perspectives d'évolution et modèles économiques</li>
+                            <li>Défis pour les développeurs et éditeurs de jeux</li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h4 class="text-lg font-semibold mb-2">Méthodologie</h4>
+                        <p class="text-light opacity-80">
+                            Cette veille a été réalisée à l'aide de l'agrégateur Google Alert pour suivre les actualités
+                            du secteur et de mes propres recherches.
+                        </p>
+                    </div>
+                    
+                    <div>
+                        <h4 class="text-lg font-semibold mb-2">Documentation</h4>
+                        <a href="veille.pdf" target="_blank" 
+                           class="inline-block bg-green-600 text-white py-2 px-6 rounded-lg shadow-lg hover:bg-green-700 transition duration-300">
+                           Télécharger la documentation
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Project 8 Modal (Création du Portfolio) -->
+    <div id="project8" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="text-2xl font-bold">GLPI</h3>
+                <button class="close-modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <img src="glpi.png" alt="Portfolio" class="w-30 h-auto rounded-lg mb-6">
+                <div class="space-y-4">
+                    <div>
+                        <h4 class="text-lg font-semibold mb-2">Description</h4>
+                        <p class="text-light opacity-80">
+                            GLPI (sigle de Gestionnaire Libre de Parc Informatique)2 est un logiciel libre de gestion des
+services informatiques (ITSM) et de gestion des services d'assistance (issue tracking
+system et ServiceDesk). Cette solution libre est éditée en PHP et distribuée sous licence GPL.
+En tant que technologie libre, toute personne peut exécuter, modifier ou développer le code qui
+est libre. De ce fait, les contributeurs peuvent participer à l’évolution du logiciel en soumettant des
+modules supplémentaires libre et open source, sur github.
+GLPI est une application web qui aide les entreprises à gérer leur système d’information. Parmi
+ses caractéristiques, cette solution est capable de construire un inventaire de toutes les
+ressources de la société et de réaliser la gestion des tâches administratives et financières. Les
+fonctionnalités de cette solution aident les administrateurs informatiques à créer une base de
+données regroupant des ressources techniques et de gestion, ainsi qu’un historique des actions
+de maintenance. La fonctionnalité de gestion d'assistance ou helpdesk fournit aux utilisateurs un service leur permettant de signaler des incidents ou de créer des demandes basées sur un actif
+ou non, ceci par la création d'un ticket d’assistance3
+.
+                        </p>
+                    </div>
+                    
+                    <div>
+                        <h4 class="text-lg font-semibold mb-2">Technologies utilisées</h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="tech-tag">Cisco</span>
+                            <span class="tech-tag">GLPI</span>
+                            <span class="tech-tag">Ubuntu</span>
+                        </div>
+                    </div>
+                    
+                    <div>
+                       
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        
+                        </a>
+                        
+                        <h4 class="text-lg font-semibold mb-2">Documentation</h4>
+                        <a href="GLPI.pdf" target="_blank" 
+                           class="inline-block bg-green-600 text-white py-2 px-6 rounded-lg shadow-lg hover:bg-green-700 transition duration-300">
+                           Télécharger la documentation
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Project 9 Modal (Stages BTS SIO) -->
+    <div id="project9" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="text-2xl font-bold">Stages BTS SIO</h3>
+                <button class="close-modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <img src="chiche.jpeg" alt="Stages BTS SIO" class="w-full h-auto rounded-lg mb-6">
+                <div class="space-y-4">
+                    <div>
+                        <h4 class="text-lg font-semibold mb-2">Description</h4>
+                        <p class="text-light opacity-80">
+                            Durant mon stage de deuxième année, j'ai participé à la création d'un site web vitrine codé en HTML, CSS, JS & PHP.
+                        </p>
+                    </div>
+                    
+                    <div class="bg-dark p-6 rounded-lg mb-6">
+                        <h4 class="text-xl font-bold mb-4 text-primary">Objectifs</h4>
+                        <p class="text-light opacity-80 mb-4">
+                            Passage d'un site web dynamique à statique avec une refonte graphique et amélioration du visuel
+                        </p>
+                        
+                        <h5 class="text-lg font-semibold mb-2">Missions principales :</h5>
+                        <ul class="list-disc pl-6 text-light opacity-80 space-y-1 mb-4">
+                            <li>- Optimiser le site pour tous les appareils (Tablette, Smartphone, PC) </li>
+                            <li>- Améliorer la navigation et l'expérience utilisateur </li>
+                            <li>- Création du formulaire de contact</li>
+                            <li>- Création de la page accueil, et de la boutique</li>
+                        </ul>
+                        
+                        <h5 class="text-lg font-semibold mb-2">Compétences développées :</h5>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="tech-tag">HTML/CSS</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">PHP</span>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <h4 class="text-lg font-semibold mb-2">Documentation des stages</h4>
+                        <a href="2stage.pdf" target="_blank" class="inline-block bg-blue-600 text-white py-2 px-6 rounded-lg shadow-lg hover:bg-blue-700 transition duration-300 mb-2">
+                            <i class="fas fa-file-pdf mr-2"></i> Documentation du stage
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- AOS Script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    
+    <!-- Custom JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
